@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+:root{
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 24%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+html{
+	box-sizing: border-box;
+	font-size: 62.5%; /*1rem = 10px*/
+}
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+body{
+	font-size: 1.5rem;
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--Very-Dark-Blue);
+}
+/* ESTILOS GENERALES */
+button{
+    border: 0;
+}
+.card, .thanks{
+    width: 33rem;
+    height: 36.4rem;
+    padding: 2.4rem;
+    color: var(--Light-Grey);
+    margin: 15rem auto 6.5rem;
+    border-radius: 1.6rem;
+    background-color: var(--Dark-Blue);
+}
+.card__start, .card__button{
+    width: 4rem;
+    height: 4rem;
+    display: grid;
+    border-radius: 50%;
+    place-content: center;
+    color: var(--Light-Grey);
+    background-color: var(--Medium-Grey);
+}
+.card__title{
+    font-size: 2.4rem;
+    margin: 2.1rem 0; 
+    color: var(--White);
+}
+.card__text, .thanks__text{
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+}
+.card__buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 2.4rem 0 2.1rem;
+}
+.card__button:hover{
+    cursor: pointer;
+    background-color: var(--Orange);
+    color: var(--White);
+}
+.card__button:focus{
+    color: var(--White);
+    background-color: var(--Light-Grey);
+}
+.card__btn{
+    width: 100%;
+    height: 4.6rem;
+    color: var(--White);
+    letter-spacing: 3px;
+    border-radius: 5rem;
+    transition: all 300ms;
+    text-transform: uppercase;
+    background-color: var(--Orange);
+}
+.card__btn:hover{
+    cursor: pointer;
+    color: var(--Orange);
+    background-color: var(--White);
+}
+/* THANKS YOU CARD */
+.thanks{
+    display: none;
+    padding: 3.4rem 2.4rem;
+    text-align: center;
+}
+.thanks__title{
+    color: var(--White);
+    margin-bottom: 1.8rem;
+}
+.thanks__selected{
+    width: 18rem;
+    height: 3.6rem;
+    padding: .9rem;
+    font-size: 1.4rem;
+    color: var(--Orange);
+    margin: 2.2rem auto 0;
+    text-align: center;
+    border-radius: 2rem;
+    background-color: var(--Medium-Grey);
+}
+/* FOOTER */
+.attribution{
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--White);
+}
+.attribution a{
+    color: var(--Orange);
+}
+@media (min-width: 500px){
+    .card, .thanks{
+        width: 41.2rem;
+        height: 41.2rem;
+        padding: 3.4rem;
+    }
+    .card__start, .card__button{
+        width: 5rem;
+        height: 5rem;
+    }
+    .card__title, .thanks__title{
+        font-size: 2.8rem;
+    }
+    .card__text, .thanks__text{
+        font-size: 1.6rem;
+    }
+    .card__buttons{
+        margin: 2.4rem 0 3.2rem;
+    }
+    .thanks__selected{
+        width: 19.5rem;
+        font-size: 1.5rem;
+    }
+    .thanks__title{
+        margin-top: 3.7rem;
+    }
+}
